@@ -30,6 +30,8 @@ RL-Learning/
     python Q-Learning.py
     ```
 
+<img src="Assets/q_table.png" alt="QTable Example" style="width:400px;"/>
+
 ## Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests.
