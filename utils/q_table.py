@@ -46,6 +46,9 @@ def plot_q_table(q_table, actions, fname=None):
                 color = q_to_color(q_value, q_min, q_range)
                 triangle = patches.Polygon(triangles[action], facecolor=color, edgecolor='black')
                 ax.add_patch(triangle)
+                # Add Q-value text to the triangle
+                triangle_center = np.mean(triangles[action], axis=0)  # Calculate the center of the triangle
+                ax.text(triangle_center[0], triangle_center[1], f'{q_value:.2f}', color='black', ha='center', va='center', fontsize=8)
 
     # Set axis limits and labels
     ax.set_xlim(0, cols)
